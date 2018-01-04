@@ -5,16 +5,17 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 
 const app = express();
-
-app.get('/', (req, res) => {
-  res.send('Hi Server');
-});
+//
+// app.get('/', (req, res) => {
+//   res.send('Hi Server');
+// });
 app.get('/api/server', function(req, res) {
   res.send('Hello World! from server');
 });
 app.get('/proxy/my/path', function(req, res) {
   res.send('Hello Worldzzzz! from server');
 });
+// NODE_ENV=production
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/public'));
