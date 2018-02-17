@@ -1,0 +1,64 @@
+@mixin gradient($from, $to) {
+  /* fallback/image non-cover color */
+  background-color: $from;
+
+  /* Firefox 3.6+ */
+  background-image: -moz-linear-gradient($from, $to);
+
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient($from, $to);
+
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient($from, $to);
+}
+
+@mixin strip($color) {
+  border-left: 3px solid $color;
+  padding-left: 4px;
+}
+
+.about {
+  @include gradient(#177094 , #b11347);
+  margin: 0px;
+  margin-top: 100px;
+  padding-bottom: 30px;
+
+  color: #ffffff;
+  font-family: 'Ubuntu';
+  .aboutHead {
+    text-align: center;
+  }
+  .aboutBody {
+    margin-left: 10px;
+  }
+  .aboutStrip1 {
+    @include strip(#6a1b9a);
+  }
+  .aboutStrip2 {
+    @include strip(#F9A825);
+  }
+  .aboutStrip3 {
+    @include strip(#9e9d24);
+  }
+  .aboutStrip4 {
+    @include strip(#D84315);
+  }
+  .aboutStrip5 {
+    @include strip(#00695c );
+  }
+  .aboutStrip6 {
+    @include strip(#2e7d32);
+  }
+  .contact {
+  }
+  .contactForm {
+  }
+  .contactMessage {
+    margin-top: 100px;
+    color: #f9a825;
+    font-size: 110%;
+
+    align: center;
+    height: 160px;
+  }
+}

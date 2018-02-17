@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: white;
+  background: #177094;
   font-family: sans-serif;
   font-size: $m-size;
 }
@@ -14,4 +14,17 @@ button {
 
 button:disabled {
   cursor: default;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0px 1000px #7c3362 inset;
 }
