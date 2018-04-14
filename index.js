@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 // app.get('/', (req, res) => {
 //   res.send('Hi Server');
 // });
+// 14th April 2018
 app.get('/api/server', function(req, res) {
   res.send('Hello World! from server');
 });
